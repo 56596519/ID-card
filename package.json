@@ -1,0 +1,49 @@
+{
+  "name": "idcard-a4-layout",
+  "productName": "身份证拼版助手",
+  "version": "2.0.0",
+  "description": "身份证正反面自动拉正、A4拼版打印工具（纯本地离线运行，照片不上传）",
+  "main": "main.js",
+  "author": "okpco.cn",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "selftest": "electron . --selftest",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "22.3.27",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "cn.okpco.idcardlayout",
+    "productName": "身份证拼版助手",
+    "copyright": "Copyright © 2026 okpco.cn",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!build/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "artifactName": "身份证拼版助手-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "身份证拼版助手",
+      "installerLanguages": ["zh_CN"],
+      "language": "2052"
+    },
+    "compression": "maximum"
+  }
+}

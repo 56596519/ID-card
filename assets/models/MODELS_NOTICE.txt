@@ -1,0 +1,21 @@
+本工具使用以下开源模型与运行时（均为本地推理，照片不上传）：
+
+1) DocAligner (LCNet-100 / lcnet100_h_e_bifpn_256)
+   作者: DocsaidLab
+   许可: Apache License 2.0
+   主页: https://github.com/DocsaidLab/DocAligner
+   用途: 证件/文档四角检测与分割
+   浏览器封装参考: quadscan (storrealbac), MIT License
+
+2) PP-LCNet_x1_0_doc_ori 文档图像方向分类
+   作者: PaddlePaddle
+   许可: Apache License 2.0
+   主页: https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_doc_ori_onnx
+   用途: 0/90/180/270 度方向判别
+
+3) ONNX Runtime Web
+   作者: Microsoft
+   许可: MIT License
+   主页: https://github.com/microsoft/onnxruntime
+
+上述模型权重按其各自开源许可原样分发，版权归原作者所有。
